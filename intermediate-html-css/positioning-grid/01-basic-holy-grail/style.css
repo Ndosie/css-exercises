@@ -41,8 +41,44 @@ html {
 }
 
 .article p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif;
   color: white;
   text-align: left;
+}
+
+/* My Solution */
+.container {
+  display: grid;
+  grid-template: 61px 61px 61px 61px 61px 61px 61px 61px / 326px 326px 326px 326px;
+  grid-template-areas: 
+  "header header header header"
+  "sidebar nav nav nav"
+  "sidebar article article article"
+  "sidebar article article article"
+  "sidebar article article article"
+  "sidebar article article article"
+  "sidebar article article article"
+  "footer footer footer footer";
+  gap: 15px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar
+}
+
+.nav {
+  grid-area: nav
+}
+
+.article {
+  grid-area: article;
+}
+
+.footer {
+  grid-area: footer
 }
